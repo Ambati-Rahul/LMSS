@@ -1,0 +1,15 @@
+com\example\bookbeacon\dto\UserDTO.class
+com\example\bookbeacon\controller\UserController.class
+com\example\bookbeacon\controller\BookController.class
+com\example\bookbeacon\service\UserService.class
+com\example\bookbeacon\BookBeaconBackendApplication.class
+com\example\bookbeacon\dto\BookDTO.class
+com\example\bookbeacon\model\Transaction.class
+com\example\bookbeacon\model\User.class
+com\example\bookbeacon\dto\TransactionDTO.class
+com\example\bookbeacon\controller\TransactionController.class
+com\example\bookbeacon\repository\TransactionRepository.class
+com\example\bookbeacon\repository\UserRepository.class
+com\example\bookbeacon\repository\BookRepository.class
+com\example\bookbeacon\service\TransactionService.class
+com\example\bookbeacon\model\Book.class
