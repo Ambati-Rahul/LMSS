@@ -42,13 +42,13 @@ public class BookService {
     public BookDTO updateBook(Long id, BookDTO bookDTO) {
         return bookRepository.findById(id).map(existingBook -> {
             // Calculate new available quantity based on change in total quantity
-            int quantityDifference = bookDTO.getQuantity()-existingBook.getQuantity();
+            int quantityDifference = bookDTO.getQuantity() - existingBook.getQuantity();
             existingBook.setAvailable(existingBook.getAvailable() + quantityDifference);
 
             existingBook.setTitle(bookDTO.getTitle());
             existingBook.setAuthor(bookDTO.getAuthor());
             existingBook.setCategory(bookDTO.getCategory());
-            existingBook.setIsbn(bookDTO.getIsbn()); // Should be careful with changing ISBN if it's a foreign key elsewhere
+            existingBook.setIsbn(bookDTO.getIsbn());
             existingBook.setQuantity(bookDTO.getQuantity());
             existingBook.setPublishedYear(bookDTO.getPublishedYear());
             existingBook.setDescription(bookDTO.getDescription());

@@ -7,19 +7,19 @@ import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name = "books")
-@Data // Lombok: Generates getters, setters, toString, equals, hashCode
-@NoArgsConstructor // Lombok: Generates no-argument constructor
-@AllArgsConstructor // Lombok: Generates constructor with all fields
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Use Long for primary keys
+    private Long id;
 
     private String title;
     private String author;
     private String category;
 
-    @Column(unique = true) // ISBN should be unique
+    @Column(unique = true)
     private String isbn;
 
     private Integer quantity;
@@ -29,9 +29,4 @@ public class Book {
     private Integer publishedYear;
 
     private String description;
-
-	public Object getQuantity() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
